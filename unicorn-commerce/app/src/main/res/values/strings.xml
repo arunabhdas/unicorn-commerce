@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Unicorn</string>
+    <string name="app_name">Unicorn Commerce</string>
+    <string name="welcome">Welcome</string>
 </resources>
