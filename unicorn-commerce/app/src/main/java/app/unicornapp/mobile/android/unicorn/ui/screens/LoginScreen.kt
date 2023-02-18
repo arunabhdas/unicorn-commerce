@@ -51,7 +51,7 @@ fun LoginScreen(
     ) {
         Image(
             painterResource(
-            id = R.drawable.banner_bg_2),
+            id = R.drawable.banner_bg_6),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
@@ -72,6 +72,11 @@ fun LoginCard(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+        Image(
+            painter = painterResource(
+                id = R.drawable.ic_launcher_adaptive_fore),
+            contentDescription = "Logo Image"
+        )
         Text(
             modifier = Modifier.clickable {
                 navController.navigate(route = Screen.HomeDetailScreen.route)
@@ -136,7 +141,7 @@ fun LoginCard(
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(
-                    backgroundColor = MaterialTheme.colorScheme.tertiary
+                    Color(0xFF495E57)
                 )
 
             ) {
