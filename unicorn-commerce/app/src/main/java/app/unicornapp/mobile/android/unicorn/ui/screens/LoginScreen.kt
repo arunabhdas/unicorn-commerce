@@ -157,7 +157,7 @@ fun LoginCard(
 @Preview
 @Composable
 fun LoginScreenPreview() {
-    HomeScreen(
+    LoginScreen(
         navController = rememberNavController()
     )
 }
