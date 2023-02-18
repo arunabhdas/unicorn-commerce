@@ -29,7 +29,7 @@ fun ContactScreen(
     ) {
         Image(
             painterResource(
-                id = R.drawable.banner_bg_4),
+                id = R.drawable.banner_bg_6),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()

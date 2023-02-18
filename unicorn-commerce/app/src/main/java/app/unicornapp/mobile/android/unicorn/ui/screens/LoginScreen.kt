@@ -137,7 +137,9 @@ fun LoginCard(
 
         Row() {
             Button(
-                onClick = { /* TODO-FIXME */ },
+                onClick = {
+                    navController.navigate(route = Screen.HomeScreen.route)
+                },
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(

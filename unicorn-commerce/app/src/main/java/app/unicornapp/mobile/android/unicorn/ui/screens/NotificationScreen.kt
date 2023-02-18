@@ -29,7 +29,7 @@ fun NotificationScreen(
     ) {
         Image(
             painterResource(
-                id = R.drawable.banner_bg_2),
+                id = R.drawable.banner_bg_6),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
