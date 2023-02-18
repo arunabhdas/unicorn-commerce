@@ -2,6 +2,7 @@ package app.unicornapp.mobile.android.unicorn.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -45,15 +46,17 @@ fun HomeScreen(
     navController: NavController
 ) {
     Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
+        modifier = Modifier.fillMaxSize().background(Color(0xFF495E57)),
+        contentAlignment = Alignment.TopStart
     ) {
+        /* TODO-FIXME
         Image(painterResource(
             id = R.drawable.banner_bg_6),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
         )
+        */
         HomeCard(
             navController = navController
         )
@@ -66,16 +69,16 @@ fun HomeCard(
 ) {
     Column(
         modifier = Modifier.padding(36.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start,
     ) {
         Text(
             modifier = Modifier.clickable {
                 navController.navigate(route = Screen.HomeDetailScreen.route)
             },
             text = "Unicorn Commerce",
-            color = Color.White,
             fontSize = MaterialTheme.typography.titleLarge.fontSize,
+            color = Color.White,
             fontWeight = FontWeight.Bold
         )
         Text(
@@ -83,8 +86,8 @@ fun HomeCard(
                 navController.navigate(route = Screen.HomeDetailScreen.route)
             },
             text = "Prepare for Launch",
-            color = Color.White,
             fontSize = MaterialTheme.typography.titleMedium.fontSize,
+            color = Color.White,
             fontWeight = FontWeight.Bold
         )
         Row() {
@@ -98,7 +101,7 @@ fun HomeCard(
                 
             ) {
                 Text(
-                    text = stringResource(id = R.string.login)
+                    text = stringResource(id = R.string.buy)
                 )
             }
         }
