@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Unicorn Commerce</string>
-    <string name="welcome">Welcome</string>
+    <string name="login">Login</string>
 </resources>

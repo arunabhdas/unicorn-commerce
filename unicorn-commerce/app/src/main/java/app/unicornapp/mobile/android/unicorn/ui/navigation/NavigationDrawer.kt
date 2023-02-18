@@ -66,7 +66,7 @@ fun DrawerBody(
             Text(text = "Unicorn", fontSize = 60.sp)
         }
         Image(
-            painterResource(id = R.drawable.banner_bg_2),
+            painterResource(id = R.drawable.banner_bg_4),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
