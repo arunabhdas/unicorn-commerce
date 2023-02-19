@@ -78,17 +78,17 @@ fun HomeCard(
         Text(
             modifier = Modifier.clickable {
                 navController.navigate(route = Screen.HomeDetailScreen.route)
-            },
+            }.padding(20.dp),
             text = "Unicorn Commerce",
             fontSize = MaterialTheme.typography.titleLarge.fontSize,
             color = Color.White,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
         )
         Text(
             modifier = Modifier.clickable {
                 navController.navigate(route = Screen.HomeDetailScreen.route)
-            },
-            text = "Prepare for Launch",
+            }.padding(20.dp),
+            text = "The Custom Apparel Store",
             fontSize = MaterialTheme.typography.titleMedium.fontSize,
             color = Color.White,
             fontWeight = FontWeight.Bold
@@ -100,18 +100,21 @@ fun HomeCard(
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(
                     backgroundColor = MaterialTheme.colorScheme.tertiary
-                )
+                ),
+                modifier = Modifier.padding(20.dp)
                 
             ) {
                 Text(
                     text = stringResource(id = R.string.buy)
                 )
-            }
+            }t
         }
         Image(
             painter = painterResource(id = R.drawable.logo),
             contentDescription = "",
-            Modifier.height(100.dp)
+            modifier = Modifier.height(100.dp)
+                .padding(20.dp),
+
         )
     }
 }
