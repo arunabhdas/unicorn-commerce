@@ -107,12 +107,12 @@ fun HomeCard(
                     text = stringResource(id = R.string.buy)
                 )
             }
-            Image(
-                painter = painterResource(id = R.drawable.logo),
-                contentDescription = "",
-                Modifier.height(100.dp)
-            )
         }
+        Image(
+            painter = painterResource(id = R.drawable.logo),
+            contentDescription = "",
+            Modifier.height(100.dp)
+        )
     }
 }
 
