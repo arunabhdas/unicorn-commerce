@@ -115,6 +115,7 @@ fun LoginCard(
             },
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 unfocusedLabelColor = MaterialTheme.colorScheme.inversePrimary,
+                unfocusedBorderColor = Color.Gray,
                 textColor = Color.White
             ),
             maxLines = 1,
@@ -139,6 +140,7 @@ fun LoginCard(
             },
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 unfocusedLabelColor = MaterialTheme.colorScheme.inversePrimary,
+                unfocusedBorderColor = Color.Gray,
                 textColor = Color.White
             ),
             maxLines = 1,
