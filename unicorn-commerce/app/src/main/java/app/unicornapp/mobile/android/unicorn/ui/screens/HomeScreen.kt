@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Icon
@@ -25,6 +26,7 @@ import androidx.compose.material.Button
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -32,6 +34,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -70,9 +73,11 @@ fun HomeCard(
     navController: NavController
 ) {
     Column(
-        modifier = Modifier.padding(36.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start,
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(Color(0xFF495E57))
     ) {
         Text(
             modifier = Modifier
@@ -100,14 +105,19 @@ fun HomeCard(
             Modifier
                 .fillMaxWidth()
                 .padding(20.dp), horizontalArrangement = Arrangement.Start) {
-            Text(text = stringResource(id = R.string.description_one))
+            Text(
+                text = stringResource(id = R.string.description_one),
+                Modifier.width(200.dp),
+                fontSize = 14.sp,
+                color = Color.White,
+                fontWeight = FontWeight.Light
+            )
             Image(
-                painter = painterResource(id = R.drawable.logo),
+                painter = painterResource(id = R.drawable.dont_panic_tshirt_1),
                 contentDescription = "",
-                modifier = Modifier
-                    .height(100.dp)
-                    .padding(20.dp),
-
+                Modifier
+                    .height(200.dp)
+                    .clip(RoundedCornerShape(20.dp)),
                 )
         }
 
