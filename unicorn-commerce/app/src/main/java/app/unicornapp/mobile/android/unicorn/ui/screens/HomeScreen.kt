@@ -49,7 +49,7 @@ fun HomeScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF495E57)),
+            .background(MaterialTheme.colorScheme.tertiary),
         contentAlignment = Alignment.TopStart
     ) {
         /* TODO-FIXME
