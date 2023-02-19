@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -74,30 +75,41 @@ fun HomeCard(
         horizontalAlignment = Alignment.Start,
     ) {
         Text(
-            modifier = Modifier.clickable {
-                navController.navigate(route = Screen.HomeDetailScreen.route)
-            }.padding(20.dp),
+            modifier = Modifier
+                .clickable {
+                    navController.navigate(route = Screen.HomeDetailScreen.route)
+                }
+                .padding(20.dp),
             text = "Unicorn Commerce",
             fontSize = MaterialTheme.typography.titleLarge.fontSize,
             color = Color.White,
             fontWeight = FontWeight.Bold,
         )
         Text(
-            modifier = Modifier.clickable {
-                navController.navigate(route = Screen.HomeDetailScreen.route)
-            }.padding(20.dp),
+            modifier = Modifier
+                .clickable {
+                    navController.navigate(route = Screen.HomeDetailScreen.route)
+                }
+                .padding(20.dp),
             text = "The Custom Apparel Store",
             fontSize = MaterialTheme.typography.titleMedium.fontSize,
             color = Color.White,
             fontWeight = FontWeight.Bold
         )
-        Image(
-            painter = painterResource(id = R.drawable.logo),
-            contentDescription = "",
-            modifier = Modifier.height(100.dp)
-                .padding(20.dp),
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(20.dp), horizontalArrangement = Arrangement.Start) {
+            Text(text = stringResource(id = R.string.description_one))
+            Image(
+                painter = painterResource(id = R.drawable.logo),
+                contentDescription = "",
+                modifier = Modifier
+                    .height(100.dp)
+                    .padding(20.dp),
 
-        )
+                )
+        }
 
         Row() {
             Button(
