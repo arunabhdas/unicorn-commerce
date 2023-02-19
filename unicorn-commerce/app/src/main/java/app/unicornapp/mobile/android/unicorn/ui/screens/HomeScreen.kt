@@ -91,6 +91,14 @@ fun HomeCard(
             color = Color.White,
             fontWeight = FontWeight.Bold
         )
+        Image(
+            painter = painterResource(id = R.drawable.logo),
+            contentDescription = "",
+            modifier = Modifier.height(100.dp)
+                .padding(20.dp),
+
+        )
+
         Row() {
             Button(
                 onClick = { /* TODO-FIXME */ },
@@ -107,13 +115,7 @@ fun HomeCard(
                 )
             }
         }
-        Image(
-            painter = painterResource(id = R.drawable.logo),
-            contentDescription = "",
-            modifier = Modifier.height(100.dp)
-                .padding(20.dp),
 
-        )
     }
 }
 
