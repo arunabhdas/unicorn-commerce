@@ -87,6 +87,16 @@ fun LoginCard(
             fontWeight = FontWeight.Bold
         )
 
+        Text(
+            modifier = Modifier.clickable {
+                navController.navigate(route = Screen.HomeDetailScreen.route)
+            },
+            text = "The Custom Apparel Platform for Ecommerce",
+            color = Color.White,
+            fontSize = MaterialTheme.typography.titleSmall.fontSize,
+            fontWeight = FontWeight.Bold
+        )
+
         OutlinedTextField(
             value = text,
             onValueChange = {

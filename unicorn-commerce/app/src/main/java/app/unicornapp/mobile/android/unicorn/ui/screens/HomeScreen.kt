@@ -52,14 +52,12 @@ fun HomeScreen(
             .background(MaterialTheme.colorScheme.tertiary),
         contentAlignment = Alignment.TopStart
     ) {
-        /* TODO-FIXME
         Image(painterResource(
             id = R.drawable.banner_bg_6),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
         )
-        */
         HomeCard(
             navController = navController
         )
