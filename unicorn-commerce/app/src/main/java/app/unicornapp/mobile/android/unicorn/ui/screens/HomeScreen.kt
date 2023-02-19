@@ -107,7 +107,7 @@ fun HomeCard(
                 Text(
                     text = stringResource(id = R.string.buy)
                 )
-            }t
+            }
         }
         Image(
             painter = painterResource(id = R.drawable.logo),
