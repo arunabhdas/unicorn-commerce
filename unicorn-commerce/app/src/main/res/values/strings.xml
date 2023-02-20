@@ -2,5 +2,8 @@
     <string name="app_name">Unicorn Commerce</string>
     <string name="login">Login</string>
     <string name="buy">Buy</string>
+    <string name="tshirt">T-Shirt</string>
+    <string name="size_medium">Medium</string>
+    <string name="price">$ 19.99</string>
     <string name="description_one">Unicorn Commerce is an apparel platform that specializes in creating unique and personalized clothing items for customers of all ages. At Unicorn, customers can choose from a wide range of clothing items, including t-shirts, sweatshirts, hoodies, tank tops, and more. What sets Unicorn apart from other custom apparel stores is its commitment to quality and attention to detail. The store uses only the highest-quality materials, ensuring that each item is both durable and comfortable to wear. And with a team of skilled designers and artisans, Unicorn is able to bring even the most complex designs to life, ensuring that each item is truly one-of-a-kind.</string>
 </resources>

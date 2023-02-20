@@ -62,9 +62,15 @@ fun HomeScreen(
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
         )
-        TopPanel(
-            navController = navController
-        )
+        Column() {
+            TopPanel(
+                navController = navController
+            )
+            BottomPanel(
+                navController = navController
+            )
+        }
+
     }
 }
 
