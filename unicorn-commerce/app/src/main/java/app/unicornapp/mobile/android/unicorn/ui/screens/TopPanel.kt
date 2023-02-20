@@ -94,7 +94,7 @@ fun TopPanel(
         Row() {
             Button(
                 onClick = {
-                          Toast.makeText(context, "Button Clicked", Toast.LENGTH_SHORT).show()
+                          Toast.makeText(context, "Order Confirmed", Toast.LENGTH_SHORT).show()
                 },
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
                 shape = RoundedCornerShape(10.dp),
