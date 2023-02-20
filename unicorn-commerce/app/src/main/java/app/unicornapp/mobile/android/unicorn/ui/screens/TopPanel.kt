@@ -1,5 +1,6 @@
 package app.unicornapp.mobile.android.unicorn.ui.screens
 
+import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -21,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -28,6 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.R
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 
@@ -35,9 +38,10 @@ import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
  * UpperPanel
  */
 @Composable
-fun UpperPanel(
+fun TopPanel(
     navController: NavController
 ) {
+    val context = LocalContext.current
     Column(
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start,
@@ -89,7 +93,9 @@ fun UpperPanel(
 
         Row() {
             Button(
-                onClick = { /* TODO-FIXME */ },
+                onClick = {
+                          Toast.makeText(context, "Button Clicked", Toast.LENGTH_SHORT).show()
+                },
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(
@@ -109,6 +115,8 @@ fun UpperPanel(
 
 @Preview
 @Composable
-fun UpperPanenlPreview() {
-    UpperPanel()
+fun TopPanenlPreview() {
+    TopPanel(
+        navController = rememberNavController()
+    )
 }
