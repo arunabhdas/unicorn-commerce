@@ -62,82 +62,9 @@ fun HomeScreen(
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
         )
-        HomeCard(
+        UpperPanel(
             navController = navController
         )
-    }
-}
-
-@Composable
-fun HomeCard(
-    navController: NavController
-) {
-    Column(
-        verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.Start,
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(Color(0xFF495E57))
-    ) {
-        Text(
-            modifier = Modifier
-                .clickable {
-                    navController.navigate(route = Screen.HomeDetailScreen.route)
-                }
-                .padding(20.dp),
-            text = "Unicorn Commerce",
-            fontSize = MaterialTheme.typography.titleLarge.fontSize,
-            color = Color.White,
-            fontWeight = FontWeight.Bold,
-        )
-        Text(
-            modifier = Modifier
-                .clickable {
-                    navController.navigate(route = Screen.HomeDetailScreen.route)
-                }
-                .padding(20.dp),
-            text = "The Custom Apparel Store",
-            fontSize = MaterialTheme.typography.titleMedium.fontSize,
-            color = Color.White,
-            fontWeight = FontWeight.Bold
-        )
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .padding(20.dp), horizontalArrangement = Arrangement.Start) {
-            Text(
-                text = stringResource(id = R.string.description_one),
-                Modifier.width(200.dp),
-                fontSize = 14.sp,
-                color = Color.White,
-                fontWeight = FontWeight.Light
-            )
-            Image(
-                painter = painterResource(id = R.drawable.dont_panic_tshirt_1),
-                contentDescription = "",
-                Modifier
-                    .height(200.dp)
-                    .clip(RoundedCornerShape(20.dp)),
-                )
-        }
-
-        Row() {
-            Button(
-                onClick = { /* TODO-FIXME */ },
-                border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
-                shape = RoundedCornerShape(10.dp),
-                colors = ButtonDefaults.buttonColors(
-                    backgroundColor = MaterialTheme.colorScheme.tertiary
-                ),
-                modifier = Modifier.padding(20.dp)
-                
-            ) {
-                Text(
-                    text = stringResource(id = R.string.buy)
-                )
-            }
-        }
-
     }
 }
 
