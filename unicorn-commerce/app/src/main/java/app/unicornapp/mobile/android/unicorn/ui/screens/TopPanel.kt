@@ -55,7 +55,7 @@ fun TopPanel(
                     navController.navigate(route = Screen.HomeDetailScreen.route)
                 }
                 .padding(20.dp),
-            text = "Unicorn Commerce",
+            text = "",
             fontSize = MaterialTheme.typography.titleLarge.fontSize,
             color = Color.White,
             fontWeight = FontWeight.Bold,
@@ -66,8 +66,8 @@ fun TopPanel(
                     navController.navigate(route = Screen.HomeDetailScreen.route)
                 }
                 .padding(20.dp),
-            text = "The Custom Apparel Store",
-            fontSize = MaterialTheme.typography.titleMedium.fontSize,
+            text = "Unicorn Commerce",
+            fontSize = MaterialTheme.typography.titleLarge.fontSize,
             color = Color.White,
             fontWeight = FontWeight.Bold
         )
