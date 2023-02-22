@@ -17,6 +17,11 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -55,6 +60,9 @@ fun BrowseScreen(
 private fun ItemOrder(
     navController: NavController
 ) {
+    var count by remember {
+        mutableStateOf(0)
+    }
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -77,25 +85,28 @@ private fun ItemOrder(
             verticalAlignment = Alignment.CenterVertically
         ) {
             IconButton(
-                onClick = { /* TODO */ }
+                onClick = { count-- }
             ) {
                 Icon(
                     imageVector = Icons.Default.Remove,
-                    contentDescription = "Remove"
+                    contentDescription = "Remove",
+                    tint = Color.White
                 )
             }
             Text(
-                text = "0",
+                text = "$count",
+                color = Color.White,
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(8.dp)
             )
             IconButton(
-                onClick = { /* TODO */ }
+                onClick = { count++  }
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
-                    contentDescription = "Add"
+                    contentDescription = "Add",
+                    tint = Color.White
                 )
             }
         }
