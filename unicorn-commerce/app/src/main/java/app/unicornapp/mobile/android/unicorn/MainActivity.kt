@@ -30,8 +30,8 @@ import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.ui.navigation.MenuItem
 import app.unicornapp.mobile.android.unicorn.ui.navigation.CustomAppBar
 import app.unicornapp.mobile.android.unicorn.ui.navigation.DrawerBody
-import app.unicornapp.mobile.android.unicorn.ui.navigation.DrawerHeader
 import app.unicornapp.mobile.android.unicorn.ui.navigation.SetupNavGraph
+import app.unicornapp.mobile.android.unicorn.ui.screens.TopAppBar
 import app.unicornapp.mobile.android.unicorn.ui.theme.UnicornTheme
 import app.unicornapp.mobile.android.unicorn.viewmodel.UnicornViewModel
 import kotlinx.coroutines.launch

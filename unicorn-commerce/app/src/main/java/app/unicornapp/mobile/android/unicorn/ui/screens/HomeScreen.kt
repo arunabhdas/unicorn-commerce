@@ -63,6 +63,7 @@ fun HomeScreen(
             modifier = Modifier.matchParentSize()
         )
         Column() {
+            TopAppBar()
             TopPanel(
                 navController = navController
             )

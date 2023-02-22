@@ -47,7 +47,7 @@ fun TopPanel(
         horizontalAlignment = Alignment.Start,
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(0xFF495E57))
+            /* TODO-FIXME-CLEANUP .background(Color(0xFF495E57)) */
     ) {
         Text(
             modifier = Modifier
