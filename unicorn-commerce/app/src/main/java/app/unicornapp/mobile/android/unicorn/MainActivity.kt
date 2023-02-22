@@ -80,10 +80,10 @@ fun MyApp(
                         icon = Icons.Default.Home
                     ),
                     MenuItem(
-                        id = "contact",
-                        title = "Contact",
-                        route = "contact_screen",
-                        contentDescription = "Navigate to Contact",
+                        id = "browse",
+                        title = "Browse",
+                        route = "browse_screen",
+                        contentDescription = "Navigate to Browse",
                         icon = Icons.Default.Email
                     ),
                     MenuItem(

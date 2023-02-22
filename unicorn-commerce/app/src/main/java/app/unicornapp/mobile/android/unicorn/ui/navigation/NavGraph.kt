@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import app.unicornapp.mobile.android.unicorn.ui.screens.ContactScreen
+import app.unicornapp.mobile.android.unicorn.ui.screens.BrowseScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.HomeScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.HomeDetailScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.LoginScreen
@@ -52,9 +52,9 @@ fun SetupNavGraph(
         }
 
         composable(
-            route = Screen.ContactScreen.route
+            route = Screen.BrowseScreen.route
         ) {
-            ContactScreen(
+            BrowseScreen(
                 navController = navController
             )
         }
