@@ -1,5 +1,6 @@
 package app.unicornapp.mobile.android.unicorn.ui.screens
 
+import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -27,10 +28,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -45,6 +49,7 @@ import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 fun LoginScreen(
     navController: NavController
 ) {
+
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -66,7 +71,14 @@ fun LoginScreen(
 fun LoginCard(
     navController: NavController
 ) {
-    var text by remember { mutableStateOf("") }
+    var username by remember {
+        mutableStateOf(TextFieldValue(""))
+    }
+
+    var password by remember {
+        mutableStateOf(TextFieldValue(""))
+    }
+    val context = LocalContext.current
     Column(
         modifier = Modifier.padding(36.dp),
         verticalArrangement = Arrangement.Center,
@@ -98,10 +110,11 @@ fun LoginCard(
         )
 
         OutlinedTextField(
-            value = text,
+            value = username,
             onValueChange = {
-                  text = it
+                  username = it
             },
+            label = { Text(text = "Username")},
             modifier = Modifier
                 .padding(16.dp)
                 .fillMaxWidth(),
@@ -123,10 +136,12 @@ fun LoginCard(
         )
 
         OutlinedTextField(
-            value = "",
+            value = password,
             onValueChange = {
-                 text = it
+                 password = it
             },
+            label = { Text(text = "Password")},
+            visualTransformation = PasswordVisualTransformation(),
             modifier = Modifier
                 .padding(16.dp)
                 .fillMaxWidth(),
@@ -150,7 +165,18 @@ fun LoginCard(
         Row() {
             Button(
                 onClick = {
-                    navController.navigate(route = Screen.HomeScreen.route)
+                    if (username.text == "username" && password.text == "password") {
+                        Toast.makeText(context,
+                            "Welcome!",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        navController.navigate(route = Screen.HomeScreen.route)
+                    } else {
+                        Toast.makeText(context,
+                            "Invalid",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
                 },
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
                 shape = RoundedCornerShape(10.dp),
