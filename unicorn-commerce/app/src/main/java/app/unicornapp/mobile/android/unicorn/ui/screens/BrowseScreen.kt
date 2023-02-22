@@ -41,6 +41,9 @@ import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 fun BrowseScreen(
     navController: NavController
 ) {
+    var count by rememberSaveable() {
+        mutableStateOf(0)
+    }
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -52,18 +55,24 @@ fun BrowseScreen(
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
         )
-        ItemOrder(navController = navController)
+        ItemOrder(
+            count,
+            { count++ },
+            { count --},
+            navController = navController
+        )
     }
 
 }
 
 @Composable
 private fun ItemOrder(
+    count: Int,
+    onIncrement: () -> Unit,
+    onDecrement: () -> Unit,
     navController: NavController
 ) {
-    var count by rememberSaveable() {
-        mutableStateOf(0)
-    }
+
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -86,7 +95,7 @@ private fun ItemOrder(
             verticalAlignment = Alignment.CenterVertically
         ) {
             IconButton(
-                onClick = { count-- }
+                onClick = { onDecrement() }
             ) {
                 Icon(
                     imageVector = Icons.Default.Remove,
@@ -102,7 +111,7 @@ private fun ItemOrder(
                 modifier = Modifier.padding(8.dp)
             )
             IconButton(
-                onClick = { count++  }
+                onClick = { onIncrement()  }
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
