@@ -2,6 +2,7 @@ package app.unicornapp.mobile.android.unicorn.ui.navigation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -74,15 +75,24 @@ fun DrawerBody(
         Column {
             Row(
                 modifier = Modifier.fillMaxWidth()
+                                    .padding(horizontal = 20.dp),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(
-                    painterResource(id = R.drawable.unicorn_white),
+                    painterResource(id = R.drawable.shoppingbag),
                     contentDescription = "",
-                    contentScale = ContentScale.FillWidth,
-                    modifier = Modifier.weight(1f)
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.weight(0.25f)
                 )
                 Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = "Unicorn App",
+                    style = itemTextStyle,
+                    color = Color.White,
+                    modifier = Modifier.weight(0.75f)
 
+                )
             }
             LazyColumn(modifier) {
                 items(items) { item ->
