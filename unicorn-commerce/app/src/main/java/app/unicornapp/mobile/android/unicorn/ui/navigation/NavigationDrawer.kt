@@ -42,7 +42,7 @@ fun DrawerHeader() {
             .padding(vertical = 64.dp),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = "Unicorn", fontSize = 60.sp)
+        Text(text = "Unicorn App", fontSize = 60.sp)
     }
 
 }
