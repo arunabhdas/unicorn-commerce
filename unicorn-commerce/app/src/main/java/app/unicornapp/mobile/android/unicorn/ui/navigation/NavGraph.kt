@@ -8,6 +8,7 @@ import app.unicornapp.mobile.android.unicorn.ui.screens.BrowseScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.HomeScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.HomeDetailScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.LoginScreen
+import app.unicornapp.mobile.android.unicorn.ui.screens.MenuListScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.NotificationScreen
 
 @Composable
@@ -55,6 +56,14 @@ fun SetupNavGraph(
             route = Screen.BrowseScreen.route
         ) {
             BrowseScreen(
+                navController = navController
+            )
+        }
+
+        composable(
+            route = Screen.MenuListScreen.route
+        ) {
+            MenuListScreen(
                 navController = navController
             )
         }

@@ -64,6 +64,7 @@ fun TopPanel(
             modifier = Modifier
                 .clickable {
                     navController.navigate(route = Screen.HomeDetailScreen.route)
+
                 }
                 .padding(20.dp),
             text = "Unicorn Commerce",
@@ -94,18 +95,23 @@ fun TopPanel(
         Row() {
             Button(
                 onClick = {
-                          Toast.makeText(context, "Order Confirmed", Toast.LENGTH_SHORT).show()
+                          Toast.makeText(
+                              context,
+                              "Navigating to MenuList",
+                              Toast.LENGTH_SHORT
+                          ).show()
+                          navController.navigate(route = Screen.MenuListScreen.route)
                 },
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(
                     backgroundColor = MaterialTheme.colorScheme.tertiary
                 ),
-                modifier = Modifier.padding(20.dp)
+                modifier = Modifier.padding(10.dp)
 
             ) {
                 Text(
-                    text = stringResource(id = R.string.buy)
+                    text = stringResource(id = R.string.checkout)
                 )
             }
         }
