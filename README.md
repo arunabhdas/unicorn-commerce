@@ -10,3 +10,9 @@ Unicorn ecommerce app
 
 ## Mocks
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/mocks/mock_4_3_resized.jpg" width="200"/>
+
+## Links
+
+https://youtu.be/doGsRC2J1Fc
+
+
