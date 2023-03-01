@@ -24,7 +24,9 @@ import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 
 @Composable
 fun MenuListScreen(
-    navController: NavController
+    navController: NavController,
+    id: String,
+    name: String
 ) {
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -50,7 +52,7 @@ fun MenuListScreen(
                         }
                     }
                 },
-                text = "MenuListScreen",
+                text = name + id,
                 color = Color.White,
                 fontSize = MaterialTheme.typography.titleSmall.fontSize,
                 fontWeight = FontWeight.Bold
@@ -64,5 +66,5 @@ fun MenuListScreen(
 @Preview
 @Composable
 fun MenuListScreenPreview() {
-    MenuListScreen(navController = rememberNavController())
+    MenuListScreen(navController = rememberNavController(), id = "12345", name = "Unicorn")
 }

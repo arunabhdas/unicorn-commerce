@@ -67,7 +67,7 @@ fun TopPanel(
 
                 }
                 .padding(20.dp),
-            text = "Unicorn Commerce",
+            text = "Unicorn Commerce T-Shirt",
             fontSize = MaterialTheme.typography.titleLarge.fontSize,
             color = Color.White,
             fontWeight = FontWeight.Bold
@@ -111,6 +111,30 @@ fun TopPanel(
             ) {
                 Text(
                     text = stringResource(id = R.string.checkout)
+                )
+            }
+            Button(
+                onClick = {
+                    Toast.makeText(
+                        context,
+                        "Adding to Cart",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    // TODO-FIXME-CLEANUP navController.navigate(route = Screen.MenuListScreen.passId(123))
+                    navController.navigate(route = Screen.MenuListScreen.passIdAndName(
+                        id = 123,
+                        name = "Unicorn"
+                    ))
+                },
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
+                shape = RoundedCornerShape(10.dp),
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = MaterialTheme.colorScheme.tertiary
+                ),
+                modifier = Modifier.padding(10.dp)
+            ) {
+                Text(
+                    text = stringResource(id = R.string.add_to_cart)
                 )
             }
         }

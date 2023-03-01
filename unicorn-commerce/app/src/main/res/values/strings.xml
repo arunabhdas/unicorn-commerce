@@ -2,6 +2,7 @@
     <string name="app_name">Unicorn Commerce</string>
     <string name="login">Login</string>
     <string name="checkout">Checkout</string>
+    <string name="add_to_cart">Add to Cart</string>
     <string name="tshirt">T-Shirt</string>
     <string name="size_medium">Medium</string>
     <string name="price">$ 19.99</string>
