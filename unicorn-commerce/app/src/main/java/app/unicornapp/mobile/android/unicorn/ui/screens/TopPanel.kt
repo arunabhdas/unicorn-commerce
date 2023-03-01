@@ -100,7 +100,11 @@ fun TopPanel(
                               "Navigating to MenuList",
                               Toast.LENGTH_SHORT
                           ).show()
-                          navController.navigate(route = Screen.MenuListScreen.route)
+                          // TODO-FIXME-CLEANUP navController.navigate(route = Screen.MenuListScreen.route)
+                          navController.navigate(route = Screen.MenuListScreen.passIdAndName(
+                                id = 0,
+                                name = "MenuListScreen"
+                          ))
                 },
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
                 shape = RoundedCornerShape(10.dp),
@@ -122,8 +126,8 @@ fun TopPanel(
                     ).show()
                     // TODO-FIXME-CLEANUP navController.navigate(route = Screen.MenuListScreen.passId(123))
                     navController.navigate(route = Screen.MenuListScreen.passIdAndName(
-                        id = 123,
-                        name = "Unicorn"
+                        id = 0,
+                        name = "MenuListScreen"
                     ))
                 },
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),

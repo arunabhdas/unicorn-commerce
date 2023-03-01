@@ -14,11 +14,11 @@ sealed class Screen(val route: String) {
     object NotificationScreen: Screen(route = "notification_screen")
     object HomeDetailScreen: Screen(route = "home_detail_screen")
     object MenuListScreen: Screen(route = "menu_list_screen/{$MENU_LIST_SCREEN_ARGUMENT_KEY}/{$MENU_LIST_SCREEN_ARGUMENT_KEY_2}") {
-        /* TODO-FIXME-DEPRECATE
+
         fun passId(id: Int): String {
             return this.route.replace(oldValue = "{$MENU_LIST_SCREEN_ARGUMENT_KEY}", newValue = id.toString())
         }
-        */
+
         fun passIdAndName(
             id: Int,
             name: String
