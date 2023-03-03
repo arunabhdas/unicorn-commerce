@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'app.unicornapp.mobile.android.unicorn'
+    namespace 'app.unicornapp.beta.android.unicorn'
     compileSdk 33
 
     defaultConfig {
-        applicationId "app.unicornapp.mobile.android.unicorn"
+        applicationId "app.unicornapp.beta.android.unicorn"
         minSdk 23
         targetSdk 33
         versionCode 1

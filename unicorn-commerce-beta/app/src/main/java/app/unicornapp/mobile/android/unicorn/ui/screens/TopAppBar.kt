@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import app.unicornapp.mobile.android.unicorn.R
+import app.unicornapp.beta.android.unicorn.R
 
 @Composable
 fun TopAppBar(

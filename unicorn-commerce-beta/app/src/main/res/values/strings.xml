@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Unicorn Commerce</string>
+    <string name="app_name">Unicorn Commerce Beta</string>
     <string name="login">Login</string>
     <string name="checkout">Checkout</string>
     <string name="add_to_cart">Add to Cart</string>

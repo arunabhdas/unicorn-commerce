@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import app.unicornapp.mobile.android.unicorn.R
+import app.unicornapp.beta.android.unicorn.R
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 
 

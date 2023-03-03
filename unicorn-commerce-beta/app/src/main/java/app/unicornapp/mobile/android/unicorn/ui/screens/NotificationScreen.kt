@@ -16,14 +16,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import app.unicornapp.mobile.android.unicorn.R
+import app.unicornapp.beta.android.unicorn.R
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 
-/**
- * BrowseDetailScreen
- */
 @Composable
-fun BrowseDetailScreen(
+fun NotificationScreen(
     navController: NavController
 ) {
     Box(
@@ -45,7 +42,7 @@ fun BrowseDetailScreen(
                     }
                 }
             },
-            text = "Detail",
+            text = "Notification",
             color = Color.White,
             fontSize = MaterialTheme.typography.titleSmall.fontSize,
             fontWeight = FontWeight.Bold
@@ -56,6 +53,6 @@ fun BrowseDetailScreen(
 
 @Preview
 @Composable
-fun BrowseDetailScreenPreview() {
-    BrowseDetailScreen(navController = rememberNavController())
+fun NotificationScreenPreview() {
+    NotificationScreen(navController = rememberNavController())
 }

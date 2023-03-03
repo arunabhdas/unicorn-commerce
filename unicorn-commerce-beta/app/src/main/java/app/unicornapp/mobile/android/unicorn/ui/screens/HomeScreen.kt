@@ -39,7 +39,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import app.unicornapp.mobile.android.unicorn.R
+import app.unicornapp.beta.android.unicorn.R
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 
 /**
