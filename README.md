@@ -1,6 +1,8 @@
 # unicorn-commerce
 Unicorn ecommerce app
 
+
+
 ## Screenshots
 * LoginScreen layout
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/main/screenshots/screenshot_0.png" width="200"/>
@@ -12,6 +14,10 @@ Unicorn ecommerce app
 
 ## Mocks
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/mocks/mock_4_3_resized.jpg" width="200"/>
+
+## Git Commands
+git tag <tag_name>
+git push origin <tag_name>
 
 ## Links
 

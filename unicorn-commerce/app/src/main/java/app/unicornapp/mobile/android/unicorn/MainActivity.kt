@@ -7,9 +7,13 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.Icon
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
@@ -18,7 +22,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -26,11 +32,18 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import app.unicornapp.mobile.android.unicorn.ui.bottomnav.Destinations
+import app.unicornapp.mobile.android.unicorn.ui.bottomnav.Home
+import app.unicornapp.mobile.android.unicorn.ui.bottomnav.Settings
 import app.unicornapp.mobile.android.unicorn.ui.navigation.MenuItem
 import app.unicornapp.mobile.android.unicorn.ui.navigation.CustomAppBar
 import app.unicornapp.mobile.android.unicorn.ui.navigation.DrawerBody
 import app.unicornapp.mobile.android.unicorn.ui.navigation.SetupNavGraph
+import app.unicornapp.mobile.android.unicorn.ui.screens.HomeScreen
+import app.unicornapp.mobile.android.unicorn.ui.screens.SettingsScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.TopAppBar
 import app.unicornapp.mobile.android.unicorn.ui.theme.UnicornTheme
 import app.unicornapp.mobile.android.unicorn.viewmodel.UnicornViewModel
@@ -49,14 +62,73 @@ class MainActivity : ComponentActivity() {
         }
         setContent {
             UnicornTheme {
+                // Uncomment below and MyApp lines to use drawer navigation
                 navController = rememberNavController()
-                MyApp(navController)
+                // MyApp(navController)
+                // Uncomment MyBottomNavApp to get bottomnav navigation
+                MyBottomNavApp(navController as NavHostController)
             }
         }
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
+    }
+}
+
+@Composable
+fun MyBottomNavApp(
+    navController: NavHostController
+) {
+    Scaffold(
+        modifier = Modifier.navigationBarsPadding(),
+        bottomBar = { MyBottomNavigation(navController = navController)},
+    ) { innerPadding ->
+        Box(Modifier.padding(innerPadding)) {
+            NavHost(
+                navController = navController,
+                startDestination = Home.route
+                ) {
+                composable(Home.route) {
+                    HomeScreen(navController = navController)
+                }
+
+                composable(Settings.route) {
+                    SettingsScreen(navController = navController)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun MyBottomNavigation(
+    navController: NavController
+) {
+    val destinationList = listOf<Destinations> (
+        Home,
+        Settings
+    )
+
+    val selectedIndex = rememberSaveable {
+        mutableStateOf(0)
+    }
+
+    BottomNavigation() {
+        destinationList.forEachIndexed{index, destination ->
+            BottomNavigationItem(
+                label = { Text(text = destination.title)},
+                icon = { Icon(imageVector = destination.icon, contentDescription = destination.title)},
+                selected = index == selectedIndex.value,
+                onClick = {
+                    selectedIndex.value = index
+                    navController.navigate(destinationList[index].route) {
+                        popUpTo(Home.route)
+                        launchSingleTop = true
+                    }
+                }
+            )
+        }
     }
 }
 
