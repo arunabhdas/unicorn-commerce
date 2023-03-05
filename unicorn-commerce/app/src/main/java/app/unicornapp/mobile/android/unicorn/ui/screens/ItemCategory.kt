@@ -30,6 +30,8 @@ fun ItemCategory (category: String) {
             ).show()
         },
         colors = ButtonDefaults.buttonColors(
+            backgroundColor = Color(0xFF495E57),
+            contentColor = Color.White
         ),
         shape = RoundedCornerShape(10.dp),
         modifier = Modifier.padding(10.dp),
@@ -46,3 +48,10 @@ fun ItemCategory (category: String) {
 fun ItemCategoryPreview() {
     ItemCategory(category = "Category")
 }
+
+val Categories = listOf<String>(
+    "Python",
+    "Java",
+    "C++",
+    "Kotlin"
+)
