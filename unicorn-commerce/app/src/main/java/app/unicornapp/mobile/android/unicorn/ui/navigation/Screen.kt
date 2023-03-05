@@ -12,6 +12,7 @@ sealed class Screen(val route: String) {
     object HomeScreen: Screen(route = "home_screen")
     object BrowseScreen: Screen(route = "browse_screen")
     object NotificationScreen: Screen(route = "notification_screen")
+    object CollectionsScreen: Screen(route = "collections_screen")
     object HomeDetailScreen: Screen(route = "home_detail_screen")
     object MenuListScreen: Screen(route = "menu_list_screen/{$MENU_LIST_SCREEN_ARGUMENT_KEY}/{$MENU_LIST_SCREEN_ARGUMENT_KEY_2}") {
 

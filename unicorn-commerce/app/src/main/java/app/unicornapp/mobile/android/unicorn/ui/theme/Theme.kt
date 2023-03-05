@@ -65,6 +65,8 @@ fun UnicornTheme(
         }
     }
     */
+    /* TODO-FIXME-BOTTOMNAV
+    // Uncomment MyBottomNavApp to get bottomnav navigation
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
@@ -76,6 +78,7 @@ fun UnicornTheme(
                 .isAppearanceLightNavigationBars = darkTheme
         }
     }
+    */
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,

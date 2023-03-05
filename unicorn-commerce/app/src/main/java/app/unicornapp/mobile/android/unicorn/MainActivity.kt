@@ -70,9 +70,10 @@ class MainActivity : ComponentActivity() {
             UnicornTheme {
                 // Uncomment below and MyApp lines to use drawer navigation
                 navController = rememberNavController()
-                // MyApp(navController)
+                MyApp(navController)
+                // TODO-FIXME-BOTTOMNAV
                 // Uncomment MyBottomNavApp to get bottomnav navigation
-                MyBottomNavApp(navController as NavHostController)
+                // MyBottomNavApp(navController as NavHostController)
             }
         }
     }
@@ -181,6 +182,13 @@ fun MyApp(
                         title = "Browse",
                         route = "browse_screen",
                         contentDescription = "Navigate to Browse",
+                        icon = Icons.Default.Email
+                    ),
+                    MenuItem(
+                        id = "collections",
+                        title = "Collections",
+                        route = "collections_screen",
+                        contentDescription = "Navigate to Collections",
                         icon = Icons.Default.Email
                     ),
                     MenuItem(

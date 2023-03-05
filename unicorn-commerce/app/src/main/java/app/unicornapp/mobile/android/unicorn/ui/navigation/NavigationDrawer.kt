@@ -136,6 +136,13 @@ fun DrawerBodyPreview() {
                 icon = Icons.Default.Home
             ),
             MenuItem(
+                id = "collections",
+                title = "Collections",
+                route = "collections_screen",
+                contentDescription = "Navigate to Collections",
+                icon = Icons.Default.Email
+            ),
+            MenuItem(
                 id = "contact",
                 title = "Contact",
                 route = "contact_screen",
