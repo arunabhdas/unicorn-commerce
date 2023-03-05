@@ -62,7 +62,10 @@ fun CollectionsScreen(
                 fontWeight = FontWeight.Bold
             )
 
-            Row(modifier = Modifier.fillMaxWidth()) {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.SpaceEvenly
+            ) {
                 Categories.forEach() {
                     ItemCategory(category = it)
                 }
