@@ -41,12 +41,14 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.ui.bottomnav.Destinations
 import app.unicornapp.mobile.android.unicorn.ui.bottomnav.Home
+import app.unicornapp.mobile.android.unicorn.ui.bottomnav.MenuList
 import app.unicornapp.mobile.android.unicorn.ui.bottomnav.Settings
 import app.unicornapp.mobile.android.unicorn.ui.navigation.MenuItem
 import app.unicornapp.mobile.android.unicorn.ui.navigation.CustomAppBar
 import app.unicornapp.mobile.android.unicorn.ui.navigation.DrawerBody
 import app.unicornapp.mobile.android.unicorn.ui.navigation.SetupNavGraph
 import app.unicornapp.mobile.android.unicorn.ui.screens.HomeScreen
+import app.unicornapp.mobile.android.unicorn.ui.screens.MenuListScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.SettingsScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.TopAppBar
 import app.unicornapp.mobile.android.unicorn.ui.theme.UnicornTheme
@@ -93,6 +95,9 @@ fun MyBottomNavApp(
                 navController = navController,
                 startDestination = Home.route
                 ) {
+                composable(MenuList.route) {
+                    MenuListScreen(navController = navController, id="789", name = "MenuList")
+                }
                 composable(Home.route) {
                     HomeScreen(navController = navController)
                 }
@@ -110,6 +115,7 @@ fun MyBottomNavigation(
     navController: NavController
 ) {
     val destinationList = listOf<Destinations> (
+        MenuList,
         Home,
         Settings
     )

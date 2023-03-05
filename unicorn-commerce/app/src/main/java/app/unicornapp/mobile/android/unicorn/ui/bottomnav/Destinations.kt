@@ -2,6 +2,8 @@ package app.unicornapp.mobile.android.unicorn.ui.bottomnav
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.MenuOpen
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
 
@@ -13,6 +15,13 @@ interface Destinations {
     val icon: ImageVector
     val title: String
 }
+
+object MenuList : Destinations {
+    override val route = "MenuList"
+    override val icon = Icons.Default.Menu
+    override val title = "Menu"
+}
+
 
 object Home: Destinations {
     override val route = "Home"
