@@ -28,6 +28,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -36,6 +37,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.ui.bottomnav.Destinations
 import app.unicornapp.mobile.android.unicorn.ui.bottomnav.Home
@@ -117,13 +119,25 @@ fun MyBottomNavigation(
     }
 
     BottomNavigation(
-        backgroundColor = colorResource(id = R.color.primary_contrast),
-        contentColor = colorResource(id = R.color.secondary_contrast)
+        backgroundColor = colorResource(id = R.color.tertiary_contrast),
+        contentColor = colorResource(id = R.color.white)
     ) {
+        val backStackEntry = navController.currentBackStackEntryAsState()
         destinationList.forEachIndexed{index, destination ->
+            val currentRoute = backStackEntry.value?.destination?.route
+            val selected = currentRoute ==  destination.route
             BottomNavigationItem(
-                label = { Text(text = destination.title)},
-                icon = { Icon(imageVector = destination.icon, contentDescription = destination.title)},
+                label = { Text(
+                            text = destination.title,
+                            fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Light,
+                            color = Color.White
+                         )
+                        },
+                icon = { Icon(
+                    imageVector = destination.icon,
+                    contentDescription = destination.title,
+                    tint = if (selected) Color.White else Color.Black
+                )},
                 selected = index == selectedIndex.value,
                 onClick = {
                     selectedIndex.value = index
