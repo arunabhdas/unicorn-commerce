@@ -26,6 +26,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -114,7 +116,10 @@ fun MyBottomNavigation(
         mutableStateOf(0)
     }
 
-    BottomNavigation() {
+    BottomNavigation(
+        backgroundColor = colorResource(id = R.color.primary_contrast),
+        contentColor = colorResource(id = R.color.secondary_contrast)
+    ) {
         destinationList.forEachIndexed{index, destination ->
             BottomNavigationItem(
                 label = { Text(text = destination.title)},
