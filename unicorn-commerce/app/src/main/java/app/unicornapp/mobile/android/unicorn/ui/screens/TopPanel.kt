@@ -35,7 +35,7 @@ import app.unicornapp.mobile.android.unicorn.R
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 
 /**
- * UpperPanel
+ * TopPanel
  */
 @Composable
 fun TopPanel(
