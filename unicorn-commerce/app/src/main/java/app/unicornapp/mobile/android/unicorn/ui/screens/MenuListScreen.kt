@@ -58,9 +58,7 @@ fun MenuListScreen(
                 fontWeight = FontWeight.Bold
             )
         }
-
     }
-
 }
 
 @Preview
@@ -68,3 +66,4 @@ fun MenuListScreen(
 fun MenuListScreenPreview() {
     MenuListScreen(navController = rememberNavController(), id = "12345", name = "Unicorn")
 }
+
