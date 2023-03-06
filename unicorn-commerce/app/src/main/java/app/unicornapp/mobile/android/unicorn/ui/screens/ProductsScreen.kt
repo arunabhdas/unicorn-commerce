@@ -56,7 +56,7 @@ fun ProductsScreen(
                         }
                     }
                 },
-                text = "Collections",
+                text = "Products",
                 color = Color.White,
                 fontSize = MaterialTheme.typography.titleSmall.fontSize,
                 fontWeight = FontWeight.Bold
