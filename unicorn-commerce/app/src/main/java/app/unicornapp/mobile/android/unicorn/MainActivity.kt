@@ -185,6 +185,13 @@ fun MyApp(
                         icon = Icons.Default.Email
                     ),
                     MenuItem(
+                        id = "products",
+                        title = "Products",
+                        route = "products_screen",
+                        contentDescription = "Navigate to Products",
+                        icon = Icons.Default.Email
+                    ),
+                    MenuItem(
                         id = "collections",
                         title = "Collections",
                         route = "collections_screen",
