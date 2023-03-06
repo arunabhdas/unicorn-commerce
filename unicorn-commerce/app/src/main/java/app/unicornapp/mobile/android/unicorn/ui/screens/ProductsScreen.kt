@@ -61,15 +61,7 @@ fun ProductsScreen(
                 fontSize = MaterialTheme.typography.titleSmall.fontSize,
                 fontWeight = FontWeight.Bold
             )
-
-            Column(
-                modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.SpaceEvenly
-            ) {
-                Categories.forEach() {
-                    ItemCategory(category = it)
-                }
-            }
+            ProductsGrid()
         }
     }
 }
