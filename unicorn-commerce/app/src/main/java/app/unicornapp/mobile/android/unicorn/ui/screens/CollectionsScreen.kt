@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -77,7 +78,7 @@ fun CollectionsScreen(
                 modifier = Modifier.fillMaxWidth(),
                 verticalArrangement = Arrangement.SpaceEvenly
             ) {
-                LazyRow {
+                LazyRow(state = rememberLazyListState()) {
                     items(productCategories) { productCategory ->
                         ItemCategory(category = productCategory)
                     }
@@ -87,7 +88,7 @@ fun CollectionsScreen(
                     color = Color.Gray,
                     thickness = 1.dp
                 )
-                LazyColumn {
+                LazyColumn(state = rememberLazyListState()) {
                     items(products) {product ->
                         ItemProduct(
                             navController = navController,
