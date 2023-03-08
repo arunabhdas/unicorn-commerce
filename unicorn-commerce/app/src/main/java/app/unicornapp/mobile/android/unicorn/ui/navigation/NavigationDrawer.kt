@@ -162,7 +162,15 @@ fun DrawerBodyPreview() {
                 route = "notification_screen",
                 contentDescription = "Navigate to Notifications",
                 icon = Icons.Default.Notifications
+            ),
+            MenuItem(
+                id = "more",
+                title = "More",
+                route = "more_screen",
+                contentDescription = "Navigate to More",
+                icon = Icons.Default.Notifications
             )
+
         ),
         onItemClick = {menuItem ->
         }

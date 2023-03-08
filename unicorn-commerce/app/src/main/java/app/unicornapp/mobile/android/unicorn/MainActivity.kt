@@ -16,6 +16,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.More
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.material3.MaterialTheme
@@ -204,6 +205,13 @@ fun MyApp(
                         route = "notification_screen",
                         contentDescription = "Navigate to Notifications",
                         icon = Icons.Default.Notifications
+                    ),
+                    MenuItem(
+                        id = "more",
+                        title = "More",
+                        route = "more_screen",
+                        contentDescription = "Navigate to More",
+                        icon = Icons.Default.More
                     )
                 ),
                 onItemClick = {menuItem ->
