@@ -8,6 +8,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,13 +23,16 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.R
+import app.unicornapp.mobile.android.unicorn.data.productCategories
+import app.unicornapp.mobile.android.unicorn.data.products
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 
 /**
- * CollectionsScreen
+ * CollectionsScreen.kt
  */
 
 
@@ -44,7 +52,10 @@ fun CollectionsScreen(
             modifier = Modifier.matchParentSize()
         )
         Column(
-            Modifier.fillMaxSize(),
+            Modifier.padding(
+                top = 70.dp,
+                bottom = 50.dp
+            ),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -66,8 +77,28 @@ fun CollectionsScreen(
                 modifier = Modifier.fillMaxWidth(),
                 verticalArrangement = Arrangement.SpaceEvenly
             ) {
-                Categories.forEach() {
-                    ItemCategory(category = it)
+                LazyRow {
+                    items(productCategories) { productCategory ->
+                        ItemCategory(category = productCategory)
+                    }
+                }
+                Divider(
+                    modifier = Modifier.padding(8.dp),
+                    color = Color.Gray,
+                    thickness = 1.dp
+                )
+                LazyColumn {
+                    items(products) {product ->
+                        ItemProduct(
+                            navController = navController,
+                            product = product
+                        )
+                        Divider(
+                            modifier = Modifier.padding(8.dp),
+                            color = Color.Gray,
+                            thickness = 1.dp
+                        )
+                    }
                 }
             }
         }
