@@ -33,6 +33,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.R
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
+import app.unicornapp.mobile.android.unicorn.ui.theme.UnicornApppColor
 
 /**
  * TopPanel
@@ -46,6 +47,7 @@ fun TopPanel(
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start,
         modifier = Modifier
+
             .fillMaxWidth()
             /* TODO-FIXME-CLEANUP .background(Color(0xFF495E57)) */
     ) {

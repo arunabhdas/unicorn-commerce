@@ -11,3 +11,12 @@ val Maroon100 = Color(0xFFB60F46)
 val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Transparent = Color(0xFF00000000)
+
+object UnicornApppColor {
+    val green = Color(0xFF495EE57)
+    val yellow = Color(0xFFF4CE14)
+    val orange = Color(0xFFEE9972)
+    val pink = Color(0xFFFBDABB)
+    val cloud = Color(0xFFEDEFEE)
+    val charcoal = Color(0xFF333333)
+}

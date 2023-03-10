@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.R
+import app.unicornapp.mobile.android.unicorn.ui.theme.UnicornApppColor
 
 /**
  * BottomPanel
@@ -47,9 +48,12 @@ fun SpringCollection(){
     Card(
         modifier = Modifier
             .fillMaxWidth()
+            .background(UnicornApppColor.green)
+            .padding(15.dp)
     ) {
         Text(
             text = "On Sale Items",
+            color = UnicornApppColor.charcoal,
             fontSize = 26.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
@@ -65,12 +69,12 @@ fun FallCollection() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(15.dp)
-            .background(Color(0xFF495E57))
             .clickable { }
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
+                .background(UnicornApppColor.green)
                 .padding(15.dp)
         ) {
             Column(
@@ -81,18 +85,20 @@ fun FallCollection() {
             ) {
                 Text(
                     text = stringResource(id = R.string.tshirt),
+                    color = UnicornApppColor.charcoal,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = stringResource(id = R.string.size_medium),
-                    color = Color.Gray,
+                    color = UnicornApppColor.yellow,
                     modifier = Modifier
                         .padding(top = 5.dp, bottom = 5.dp)
                         .fillMaxWidth(.75f)
                 )
                 Text(
                     text = stringResource(id = R.string.price),
+                    color = UnicornApppColor.yellow,
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -106,7 +112,7 @@ fun FallCollection() {
         }
     }
     Divider(modifier = Modifier.padding(start = 8.dp, end = 8.dp),
-        color = Color.LightGray,
+        color = UnicornApppColor.yellow,
         thickness = 1.dp
     )
 }
