@@ -8,6 +8,7 @@ import androidx.navigation.navArgument
 import androidx.navigation.compose.composable
 import app.unicornapp.mobile.android.unicorn.ui.screens.BrowseScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.CollectionsScreen
+import app.unicornapp.mobile.android.unicorn.ui.screens.SpringCollectionsScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.ProductsScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.HomeScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.HomeDetailScreen
@@ -62,6 +63,14 @@ fun SetupNavGraph(
             route = Screen.CollectionsScreen.route
         ) {
             CollectionsScreen(
+                navController = navController
+            )
+        }
+
+        composable(
+            route = Screen.SpringCollectionsScreen.route
+        ) {
+            SpringCollectionsScreen(
                 navController = navController
             )
         }

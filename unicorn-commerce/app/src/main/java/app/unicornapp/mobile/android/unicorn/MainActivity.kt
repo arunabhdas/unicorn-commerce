@@ -200,6 +200,13 @@ fun MyApp(
                         icon = Icons.Default.Email
                     ),
                     MenuItem(
+                        id = "springcollections",
+                        title = "Spring Collections",
+                        route = "spring_collections_screen",
+                        contentDescription = "Navigate to Spring Collections",
+                        icon = Icons.Default.Email
+                    ),
+                    MenuItem(
                         id = "notifications",
                         title = "Notifications",
                         route = "notification_screen",

@@ -19,12 +19,8 @@ import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.R
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
 
-/**
- * NotificationScreen.kt
- */
-
 @Composable
-fun NotificationScreen(
+fun SpringCollectionsScreen(
     navController: NavController
 ) {
     Box(
@@ -46,7 +42,7 @@ fun NotificationScreen(
                     }
                 }
             },
-            text = "Notifications",
+            text = "SpringCollectionScreen",
             color = Color.White,
             fontSize = MaterialTheme.typography.titleSmall.fontSize,
             fontWeight = FontWeight.Bold
@@ -57,6 +53,6 @@ fun NotificationScreen(
 
 @Preview
 @Composable
-fun NotificationScreenPreview() {
-    NotificationScreen(navController = rememberNavController())
+fun SpringCollectionsScreenPreview() {
+    SpringCollectionsScreen(navController = rememberNavController())
 }
