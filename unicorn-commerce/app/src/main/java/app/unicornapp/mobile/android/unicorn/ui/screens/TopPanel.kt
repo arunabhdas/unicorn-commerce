@@ -69,7 +69,7 @@ fun TopPanel(
 
                 }
                 .padding(20.dp),
-            text = "Unicorn Commerce T-Shirt",
+            text = "Starry Nights T-Shirt",
             fontSize = MaterialTheme.typography.titleLarge.fontSize,
             color = Color.White,
             fontWeight = FontWeight.Bold
@@ -155,3 +155,4 @@ fun TopPanenlPreview() {
         navController = rememberNavController()
     )
 }
+

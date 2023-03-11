@@ -48,12 +48,11 @@ fun SpringCollection(){
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .background(UnicornApppColor.green)
-            .padding(15.dp)
+            .padding(35.dp)
     ) {
         Text(
             text = "On Sale Items",
-            color = UnicornApppColor.charcoal,
+            color = UnicornApppColor.five,
             fontSize = 26.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
@@ -68,13 +67,13 @@ fun FallCollection() {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(15.dp)
+            .padding(35.dp)
             .clickable { }
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(UnicornApppColor.green)
+                .background(UnicornApppColor.five)
                 .padding(15.dp)
         ) {
             Column(
@@ -85,20 +84,20 @@ fun FallCollection() {
             ) {
                 Text(
                     text = stringResource(id = R.string.tshirt),
-                    color = UnicornApppColor.charcoal,
+                    color = UnicornApppColor.graphene,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = stringResource(id = R.string.size_medium),
-                    color = UnicornApppColor.yellow,
+                    color = UnicornApppColor.one,
                     modifier = Modifier
                         .padding(top = 5.dp, bottom = 5.dp)
                         .fillMaxWidth(.75f)
                 )
                 Text(
                     text = stringResource(id = R.string.price),
-                    color = UnicornApppColor.yellow,
+                    color = UnicornApppColor.one,
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -112,7 +111,7 @@ fun FallCollection() {
         }
     }
     Divider(modifier = Modifier.padding(start = 8.dp, end = 8.dp),
-        color = UnicornApppColor.yellow,
+        color = UnicornApppColor.one,
         thickness = 1.dp
     )
 }
