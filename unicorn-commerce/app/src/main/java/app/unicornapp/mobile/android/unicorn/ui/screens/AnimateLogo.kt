@@ -36,7 +36,11 @@ fun AnimateLogo() {
     Box(
         modifier = Modifier
             .clickable {
-                alfaImg += 1f
+                if  (alfaImg == 1f) {
+                 alfaImg -= 1f
+                } else {
+                    alfaImg += 1f
+                }
             }
     ) {
         Image(
