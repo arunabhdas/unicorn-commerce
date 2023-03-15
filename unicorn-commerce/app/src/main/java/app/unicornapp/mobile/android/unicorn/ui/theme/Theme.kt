@@ -17,6 +17,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 
+/* TODO-FIXME-CLEANUP
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     onPrimary = Olive100,
@@ -25,6 +26,15 @@ private val DarkColorScheme = darkColorScheme(
     tertiary = Maroon100,
     onTertiary = Color.White
 
+)
+*/
+private val DarkColorScheme = darkColorScheme(
+    primary = UnicornApppColor.four,
+    onPrimary = UnicornApppColor.one,
+    secondary = UnicornApppColor.five,
+    onSecondary = UnicornApppColor.two,
+    tertiary = UnicornApppColor.graphene,
+    onTertiary = Color.White
 )
 
 private val LightColorScheme = lightColorScheme(

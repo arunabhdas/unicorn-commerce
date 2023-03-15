@@ -189,7 +189,6 @@ fun LoginCard(
                     backgroundColor = Color(0xFF495E57),
                     contentColor = Color.White
                 )
-
             ) {
                 Text(
                     text = stringResource(id = R.string.login)
