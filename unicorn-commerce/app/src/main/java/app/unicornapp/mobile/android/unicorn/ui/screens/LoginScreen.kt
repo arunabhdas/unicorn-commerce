@@ -186,7 +186,8 @@ fun LoginCard(
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(
-                    Color(0xFF495E57)
+                    backgroundColor = Color(0xFF495E57),
+                    contentColor = Color.White
                 )
 
             ) {
