@@ -16,6 +16,7 @@ sealed class Screen(val route: String) {
     object SpringCollectionsScreen: Screen(route = "spring_collections_screen")
     object NotificationScreen: Screen(route = "notification_screen")
     object MoreScreen: Screen(route = "more_screen")
+    object SettingsScreen: Screen(route = "settings_screen")
     object HomeDetailScreen: Screen(route = "home_detail_screen")
     object MenuListScreen: Screen(route = "menu_list_screen/{$MENU_LIST_SCREEN_ARGUMENT_KEY}/{$MENU_LIST_SCREEN_ARGUMENT_KEY_2}") {
 

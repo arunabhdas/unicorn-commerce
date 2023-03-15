@@ -18,7 +18,7 @@ import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material3.TextField
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -123,13 +123,17 @@ fun LoginCard(
                     text = "Username",
                     color = Color.White,
                     fontSize = MaterialTheme.typography.titleSmall.fontSize,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    style = TextStyle(
+                        color = Color.White,
+                    )
                 )
             },
             colors = TextFieldDefaults.outlinedTextFieldColors(
-                unfocusedLabelColor = MaterialTheme.colorScheme.inversePrimary,
-                unfocusedBorderColor = Color.Gray,
-                textColor = Color.White
+                unfocusedLabelColor = Color.White,
+                unfocusedBorderColor = Color.White.copy(alpha = 0.5f),
+                textColor = Color.White,
+                cursorColor = Color.White
             ),
             maxLines = 1,
             singleLine = true
@@ -154,9 +158,10 @@ fun LoginCard(
                 )
             },
             colors = TextFieldDefaults.outlinedTextFieldColors(
-                unfocusedLabelColor = MaterialTheme.colorScheme.inversePrimary,
-                unfocusedBorderColor = Color.Gray,
-                textColor = Color.White
+                unfocusedLabelColor = Color.White,
+                unfocusedBorderColor = Color.White.copy(alpha = 0.5f),
+                textColor = Color.White,
+                cursorColor = Color.White
             ),
             maxLines = 1,
             singleLine = true

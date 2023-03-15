@@ -16,6 +16,7 @@ import app.unicornapp.mobile.android.unicorn.ui.screens.LoginScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.MenuListScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.MoreScreen
 import app.unicornapp.mobile.android.unicorn.ui.screens.NotificationScreen
+import app.unicornapp.mobile.android.unicorn.ui.screens.SettingsScreen
 import timber.log.Timber
 
 @Composable
@@ -87,6 +88,14 @@ fun SetupNavGraph(
             route = Screen.MoreScreen.route
         ) {
             MoreScreen(
+                navController = navController
+            )
+        }
+
+        composable(
+            route = Screen.SettingsScreen.route
+        ) {
+            SettingsScreen(
                 navController = navController
             )
         }

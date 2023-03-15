@@ -4,10 +4,13 @@ import androidx.compose.foundation.Image
 import androidx.compose.material3.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,6 +43,22 @@ fun SettingsScreen(
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
         )
+        Column(
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(text = "Unicorn App")
+            Text(text = "Settings")
+            Button(onClick = { /* TODO */}) {
+                Text("Profile")
+            }
+            Button(onClick = { /* TODO */}) {
+                Text("Settings")
+            }
+            OutlinedButton(onClick = { /*TODO*/ }) {
+                Text("Logout")
+            }
+        }
         Text(
             modifier = Modifier.clickable {
                 navController.navigate(Screen.HomeScreen.route) {

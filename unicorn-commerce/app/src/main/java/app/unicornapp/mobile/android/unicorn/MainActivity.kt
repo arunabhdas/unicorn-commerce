@@ -68,7 +68,7 @@ class MainActivity : ComponentActivity() {
             }
         }
         setContent {
-            UnicornTheme {
+            UnicornTheme() {
                 // Uncomment below and MyApp lines to use drawer navigation
                 navController = rememberNavController()
                 MyApp(navController)
@@ -218,6 +218,13 @@ fun MyApp(
                         title = "More",
                         route = "more_screen",
                         contentDescription = "Navigate to More",
+                        icon = Icons.Default.More
+                    ),
+                    MenuItem(
+                        id = "settings",
+                        title = "Settings",
+                        route = "settings_screen",
+                        contentDescription = "Navigate to Settings",
                         icon = Icons.Default.More
                     )
                 ),
