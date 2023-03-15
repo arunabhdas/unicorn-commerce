@@ -84,11 +84,7 @@ fun LoginCard(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Image(
-            painter = painterResource(
-                id = R.drawable.logo),
-            contentDescription = "Logo Image"
-        )
+        AnimateLogo()
         Text(
             modifier = Modifier.clickable {
                 navController.navigate(route = Screen.HomeDetailScreen.route)

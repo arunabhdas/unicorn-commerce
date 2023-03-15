@@ -15,8 +15,8 @@ val Transparent = Color(0xFF00000000)
 object UnicornApppColor {
     val one = Color(0xFFEEE299)
     val two = Color(0xFFCDA362)
-    val three = Color(0xFFAB6B49)
+    val three = Color(0xFF31517A)
     val four = Color(0xFF733E4F)
     val five = Color(0xFF402C44)
-    val graphene = Color(0xFF333333)
+    val graphene = Color(0xFF46354D)
 }

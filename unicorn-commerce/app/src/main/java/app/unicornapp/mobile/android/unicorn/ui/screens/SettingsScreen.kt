@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Button
@@ -28,6 +29,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.R
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
+import app.unicornapp.mobile.android.unicorn.ui.theme.UnicornApppColor
 
 /**
  * SettingsScreen
@@ -48,45 +50,49 @@ fun SettingsScreen(
             modifier = Modifier.matchParentSize()
         )
         Column(
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
+            verticalArrangement = Arrangement.SpaceEvenly,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.padding(
+                horizontal = 20.dp,
+                vertical = 20.dp
+            )
         ) {
             Text(
-                text = "Unicorn App",
+                text = "Settings",
                 color = Color.White,
                 fontSize = MaterialTheme.typography.titleSmall.fontSize,
                 fontWeight = FontWeight.Bold
-                )
+            )
+            Image(
+                painter = painterResource(
+                    id = R.drawable.logo),
+                contentDescription = "Logo Image"
+            )
             Button(
                 onClick = { /* TODO */},
-                border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
-                shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(
-                    backgroundColor = Color(0xFF495E57),
-                    contentColor = Color.White
+                    backgroundColor = UnicornApppColor.three
                 )
-                ) {
-                Text("Profile")
-            }
-            Button(
-                onClick = { /* TODO */},
             ) {
                 Text(
-                    modifier = Modifier.clickable {
-                        navController.navigate(Screen.HomeScreen.route) {
-                            popUpTo(Screen.HomeScreen.route) {
-                                inclusive = true
-                            }
-                        }
-                    },
-                    text = "Settings",
+                    text = "Change Password",
                     color = Color.White,
                     fontSize = MaterialTheme.typography.titleSmall.fontSize,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Light
                 )
             }
-            OutlinedButton(onClick = { /*TODO*/ }) {
-                Text("Logout")
+            Button(
+                onClick = { /*TODO*/ },
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = UnicornApppColor.three
+                )
+            ) {
+                Text(
+                    text = "Logout",
+                    color = Color.White,
+                    fontSize = MaterialTheme.typography.titleSmall.fontSize,
+                    fontWeight = FontWeight.Light
+                )
             }
             Text(
                 modifier = Modifier.clickable {
@@ -101,11 +107,13 @@ fun SettingsScreen(
                 fontSize = MaterialTheme.typography.titleSmall.fontSize,
                 fontWeight = FontWeight.Bold
             )
+            AnimateLogo()
         }
 
     }
 
 }
+
 
 @Preview
 @Composable
