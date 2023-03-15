@@ -41,6 +41,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import app.unicornapp.mobile.android.unicorn.R
 import app.unicornapp.mobile.android.unicorn.ui.navigation.Screen
+import app.unicornapp.mobile.android.unicorn.ui.theme.UnicornApppColor
 
 /**
  * LoginScreen
@@ -179,15 +180,15 @@ fun LoginCard(
                         ).show()
                     }
                 },
-                border = BorderStroke(1.dp, MaterialTheme.colorScheme.background),
-                shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(
-                    backgroundColor = Color(0xFF495E57),
-                    contentColor = Color.White
+                    backgroundColor = UnicornApppColor.three
                 )
             ) {
-                Text(
-                    text = stringResource(id = R.string.login)
+               Text(
+                    text = "Login",
+                    color = Color.White,
+                    fontSize = MaterialTheme.typography.titleSmall.fontSize,
+                    fontWeight = FontWeight.Light
                 )
             }
         }
