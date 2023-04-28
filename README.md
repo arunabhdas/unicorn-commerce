@@ -14,7 +14,6 @@ unicorn-commerce-beta : Tab Navigation
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_2.png" width="200"/>
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_3.png" width="200"/>
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_4.png" width="200"/>
-<img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_5_1.png" width="200"/>
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_5_2.png" width="200"/>
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_5_4.png" width="200"/>
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_part_5_1.png" width="200"/>
