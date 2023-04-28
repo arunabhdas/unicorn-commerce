@@ -10,6 +10,7 @@ unicorn-commerce-beta : Tab Navigation
 
 ## Screenshots
 * LoginScreen layout
+<img src="https://github.com/arunabhdas/unicorn-commerce/blob/develop/screenshots/screenshot_unicornapp_1.png" width="200"/>
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_0.png" width="200"/>
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_2.png" width="200"/>
 <img src="https://raw.githubusercontent.com/arunabhdas/unicorn-commerce/develop/screenshots/screenshot_3.png" width="200"/>
