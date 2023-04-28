@@ -1,6 +1,11 @@
 # unicorn-commerce
 Unicorn ecommerce app
 
+## Variants
+
+unicorn-commerce : Drawer Navigation
+
+unicorn-commerce-beta : Tab Navigation
 
 
 ## Screenshots
