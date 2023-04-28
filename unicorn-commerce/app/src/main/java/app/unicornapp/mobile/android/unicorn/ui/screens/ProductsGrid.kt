@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.unicornapp.mobile.android.unicorn.R
@@ -38,16 +39,18 @@ fun ProductsGrid() {
         }
     }
 }
-
+@Preview
 @Composable
 fun ProductsGridCell() {
     Card(
         elevation = 16.dp,
-        modifier = Modifier.padding(8.dp)
+        modifier = Modifier.padding(8.dp),
+        backgroundColor = Color.Transparent
     ) {
         Box(
             modifier = Modifier
                 .requiredSize(180.dp, 180.dp)
+                .background(Color.Transparent)
                 .padding(8.dp)
         ) {
             Image(
@@ -61,7 +64,7 @@ fun ProductsGridCell() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(4.dp)
-                    .background(Color.White)
+                    .background(Color.Transparent)
                     .align(Alignment.TopStart)
             )
             Text(
@@ -69,7 +72,7 @@ fun ProductsGridCell() {
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier
-                    .background(Color.White)
+                    .background(Color.Transparent)
                     .padding(start = 4.dp, end = 4.dp)
                     .align(Alignment.BottomEnd)
             )
