@@ -60,6 +60,7 @@ fun ProductsGridCell() {
             Text(
                 text = "Don't Panic T-shirt",
                 fontSize = 18.sp,
+                color = Color.White,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -70,6 +71,7 @@ fun ProductsGridCell() {
             Text(
                 text = "$29.99",
                 fontSize = 18.sp,
+                color = Color.White,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .background(Color.Transparent)
